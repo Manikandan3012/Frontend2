@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>claysys</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <nav class="navbar">
+        <img class="logo1" src="claylogo.jfif" alt="">
+        <h1>ClaySys</h1>
+        <div class="navbar-links">
+            <p class="navbar-link"><a href="index.html">Home</a></p>
+            <p class="navbar-link"><a href="about.html">About</a></p>
+            <p class="navbar-link"><a href="login.html">Login</a></p>
+            <p class="navbar-link"><a href="register.html">Register</a></p>
+            <p class="navbar-link"><a href="contact.html">Contact</a></p>
+        </div>
+
+        <div class="navbar-menu-toggle" onclick="shownavbar()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <div class="side-navbar">
+        <p style="text-align: right;" onclick="closenavbar()">
+            <i class="fa-solid fa-xmark"></i>
+        </p>
+        <div class="side-navbar-links">
+            <p class="navbar-link" style="padding: 10px;"><a href="index.html">Home</a></p>
+            <p class="navbar-link" style="padding: 10px;"><a href="login.html">Login</a></p>
+            <p class="navbar-link" style="padding: 10px;"><a href="register.html">Register</a></p>
+            <p class="navbar-link" style="padding: 10px;"><a href="about.html">About</a></p>
+            <p class="navbar-link" style="padding: 10px;"><a href="contact.html">Contact</a></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <form id="registrationForm">
+            <h2 style="text-align: center;">Register</h2>
+            <h4> <label for="firstName">First name</label></h4>
+            <input type="text" id="firstName" name="firstName" required>
+            <div id="firstNameError" class="error"></div>
+
+            <h4><label for="lastName">Last name</label></h4>
+            <input type="text" id="lastName" name="lastName" required>
+            <div id="lastNameError" class="error"></div>
+
+            <h4><label for="dob">Date of birth</label></h4>
+            <input type="date" id="dob" name="dob" required>
+            <div id="dobError" class="error"></div>
+
+            <h4> <label for="age">Age</label></h4>
+            <input type="text" id="age" name="age" readonly>
+            <div id="ageError" class="error"></div>
+
+            <h4><label for="gender">Gender</label></h4>
+            <div>
+                <input type="radio" id="male" name="gender" value="Male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female" required>
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="Other" required>
+                <label for="other">Other</label>
+            </div>
+            <div id="genderError" class="error"></div>
+
+            <h4> <label for="email">Email ID</label></h4>
+            <input type="email" id="email" name="email" required>
+            <div id="emailError" class="error"></div>
+
+            <h4> <label for="phone">Phone number</label></h4>
+            <input type="text" id="phone" name="phone" required>
+            <div id="phoneError" class="error"></div>
+
+            <h4><label for="address">Address</label></h4>
+            <input type="text" id="address" name="address" required>
+            <div id="addressError" class="error"></div>
+
+            <h4><label for="state">State</label></h4>
+            <select id="state" name="state" required>
+                <option value="">Select an option</option>
+                <option value="TamilNadu">TamilNadu</option>
+                <option value="Kerala">Kerala</option>
+            </select>
+            <div id="stateError" class="error"></div>
+
+            <h4><label for="city">City</label></h4>
+            <select id="city" name="city" required>
+                <option value="">Select a state first</option>
+            </select>
+            <div id="cityError" class="error"></div>
+
+            <h4> <label for="username">Username</label></h4>
+            <input type="text" id="username" name="username" required>
+            <div id="usernameError" class="error"></div>
+
+            <h4><label for="password">Password</label></h4>
+            <input type="password" id="password" name="password" required>
+            <div id="passwordError" class="error"></div>
+
+            <h4><label for="confirmPassword">Confirm password</label></h4>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <div id="confirmPasswordError" class="error"></div>
+            <center>
+                <button type="submit">Register</button>
+
+                <p>Do have an account? <a href="login.html">Login</a></p>
+            </center>
+        </form>
+    </div>
+
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-box-1">
+                <h4 class="headingText">Copyright © 2024, ClaySys Technologies. All Rights Reserved.</h4>
+                <div class="footer-icon-container">
+                    <a href="https://www.instagram.com" target="_blank" class="footer-icon"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.twitter.com" target="_blank" class="footer-icon"><i
+                            class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.facebook.com" target="_blank" class="footer-icon"><i
+                            class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
